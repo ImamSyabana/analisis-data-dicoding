@@ -12,14 +12,9 @@ st.markdown(
     """
 )
 
-st.title('Grafik Tren jumlah sepedah yang direntalkan per hari')
 
 bikeSharing_daily_df = pd.read_csv("bikeSharing_daily_clean.csv", delimiter=",")
 bikeSharing_hourly_df = pd.read_csv("bikeSharing_hourly_clean.csv", delimiter=",")
-
-rental_per_day = bikeSharing_daily_df.index.to_numpy()
-count_day = bikeSharing_daily_df["cnt"].to_numpy()
-month_perday = bikeSharing_daily_df["mnth"].to_numpy()
 
 
 
@@ -43,19 +38,28 @@ def plot_time_series_day(timesteps, values, format="-", start=0, end=None, label
     # plot the series
     st.line_chart(values[start:end], use_container_width=True)
 
-    st.pyplot(plt)
-    plt.xlabel("Jumlah rental")
-    plt.ylabel("Day")
+    #st.pyplot(plt)
+
     if label:
         plt.legend(fontsize=14)  # make label font bigger
     plt.grid(True)
 
-# Example data
+
+st.title('Grafik Tren jumlah sepedah yang direntalkan per hari')
+
+rental_per_day = bikeSharing_daily_df.index.to_numpy()
+count_day = bikeSharing_daily_df["cnt"].to_numpy()
+month_perday = bikeSharing_daily_df["mnth"].to_numpy()
+
 timesteps = rental_per_day
 values = count_day
 
 # Call the function to plot the time series chart
 plot_time_series_day(timesteps, values)
+
+st.markdown("**x-axis labelj**: hari ke-x")
+st.markdown("**y-axis label**: jumlah sepedah yang direntalkan")
+
 
 st.title('Grafik Nilai temperature cuaca yang sudah dinormalisasi per hari')
 
@@ -66,6 +70,10 @@ timesteps2 = rental_per_day
 values2 = temp_day
 
 plot_time_series_day(timesteps2, values2)
+st.markdown("**x-axis labelj**: hari ke-x")
+st.markdown("**y-axis label**: temperature cuaca yang sudah dinormalisasi per hari")
+
+
 
 st.title('Grafik Jumlah akumulasi sepeda yang disewakan pada tiap-tiap jamnya')
 
@@ -87,6 +95,5 @@ data = {element: value for element, value in zip(unique_elements, sum_values)}
 st.bar_chart(data)
 
 # Add x-axis and y-axis labels and a title as Markdown text
-st.markdown("### Jumlah akumulasi sepeda yang disewakan pada tiap-tiap jamnya")
-st.markdown("**jam**: x-axis label")
-st.markdown("**akumulasi sepeda disewakan pada masing-masing jam**: y-axis label")
+st.markdown("**x-axis label**: jam")
+st.markdown("**y-axis label**: akumulasi sepeda disewakan pada masing-masing jam")
