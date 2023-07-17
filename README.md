@@ -1,4 +1,4 @@
-# Dicoding Collection Dashboard ✨
+# Visualisasi Data Jumlah Penyewaan Sepeda
 
 ## Setup environment
 ```
