@@ -14,13 +14,14 @@ streamlit run dashboard.py
 
 ## Link to Streamlit cloud
 ```
-https://zelkova46-analisis-data-dicoding-dashboard-awnifc.streamlit.app/
+https://zelkova46-analisis-data-dicoding-dashboard-sx3g0r.streamlit.app/
 ```
 
 ## Screenshoot
-![image](https://github.com/Zelkova46/analisis-data-dicoding/assets/70127988/1761bd27-4234-41f5-be83-df228fd5694f)
+![image](https://github.com/Zelkova46/analisis-data-dicoding/assets/70127988/d9b63355-ccfd-4030-a126-46c02df27d76)
 
-![image](https://github.com/Zelkova46/analisis-data-dicoding/assets/70127988/21b80227-4297-4236-89c0-ef5df948bbfe)
+![image](https://github.com/Zelkova46/analisis-data-dicoding/assets/70127988/99dfcae6-eee2-401d-a2ec-a8ffb6336177)
 
-![image](https://github.com/Zelkova46/analisis-data-dicoding/assets/70127988/d3346cbb-e520-4670-b910-9d552103a58d)
+![image](https://github.com/Zelkova46/analisis-data-dicoding/assets/70127988/656515f5-95ab-4715-89a8-91dcc4a6bb70)
+
 
